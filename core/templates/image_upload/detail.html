@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Просмотр изображения{% endblock %}
+
+{% block header %}Просмотр изображения{% endblock %}
+
+{% block content %}
+<h2>Картинка №{{ image.id }}</h2>
+<img src="{{ image.image.url }}" class="img-thumbnail" alt="Изображение">
+<div class="mt-3">
+    <a href="{% url 'image_list' %}" class="btn btn-primary">Назад к списку</a>
+</div>
+{% endblock %}

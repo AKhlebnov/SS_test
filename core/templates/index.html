@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block header %}Тестовое задание для компании Sila Sveta{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <a href="{% url 'create_url' %}" class="btn btn-primary btn-lg">Создать короткую ссылку</a>
+    <a href="{% url 'upload_image' %}" class="btn btn-success btn-lg">Загрузить фото</a>
+    <a href="{% url 'api_upload_image' %}" class="btn btn-info btn-lg">Загрузить фото через API</a>
+</div>
+{% endblock %}

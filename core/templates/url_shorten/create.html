@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Сократить ссылку{% endblock %}
+
+{% block header %}Сократите свою ссылку{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        {{ form.original_url.label_tag }}
+        {{ form.original_url }}
+    </div>
+    <button type="submit" class="btn btn-primary">Сократить</button>
+</form>
+{% endblock %}
